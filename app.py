@@ -12,7 +12,7 @@ st.set_page_config(
 # 2. Load and Clean Data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('D:/Engineering Chakbandi Plan/Small Dams Portal/Dam_JLM/damsjlm.csv')
+    df = pd.read_csv('damsjlm.csv')
 
     # Clean newline characters from column names
     df.columns = [col.replace('\n', ' ').strip() for col in df.columns]
@@ -130,3 +130,4 @@ with col2:
 # 7. Data Explorer
 with st.expander("🔍 View Complete Details Table"):
     st.dataframe(filtered_df.drop(columns=['Decimal Latitude', 'Decimal Longitude']))
+
