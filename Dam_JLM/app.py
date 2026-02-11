@@ -90,4 +90,5 @@ with col2:
 
 # 7. Data Explorer
 with st.expander("🔍 View Complete Details Table"):
+
     st.dataframe(filtered_df.drop(columns=['Decimal Latitude', 'Decimal Longitude']))
